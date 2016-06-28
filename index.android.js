@@ -34,7 +34,7 @@ class Motion extends Component {
           source={{uri:'https://image.tmdb.org/t/p/w500_and_h281_bestv2/'+rowData.poster_path}}
           resizeMode="cover"
           style={styles.img} />
-          <Text style={{margin: 10, fontSize: 16, textAlign: 'left'}}>{rowData.title} (Rating: {Math.round( rowData.vote_average * 10 ) / 10})</Text>
+          <Text style={styles.txt}>{rowData.title} (Rating: {Math.round( rowData.vote_average * 10 ) / 10})</Text>
       </View>
     );
   }
@@ -74,6 +74,11 @@ const styles = StyleSheet.create({
   img: {
     height: 300
   },
+  txt: {
+    margin: 10,
+    fontSize: 16,
+    textAlign: 'left'
+  }
 });
 
 AppRegistry.registerComponent('Motion', () => Motion);
